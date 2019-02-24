@@ -8,6 +8,8 @@ public class ClosureInLambdaExample {
         int x = 30;
         int y = 40;
         doOperate(x, n->System.out.println((n + y)));
+
+        // 70
     }
 
 

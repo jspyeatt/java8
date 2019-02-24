@@ -26,5 +26,11 @@ public class BiConsumerExample {
 
         // embed lambda
         studMap.forEach((k,v)->System.out.println(k + " Name:" + v.getName()));
+
+//        K=1 V=a
+//        K=2 V=b
+//        K=3 V=c
+//        1 Name:John
+//        2 Name:Betsey
     }
 }

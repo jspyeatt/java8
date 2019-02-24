@@ -19,5 +19,14 @@ public class CollectorExample {
 
         double aveAge = studList.stream().collect(Collectors.averagingInt(Student::getAge));
         System.out.println("Average age: " + aveAge);
+
+//        John
+//        Betsey
+//        Thorin
+//        Clifford
+//        Sam
+//        Gwen
+//        Result = [John,Betsey,Thorin,Clifford,Sam,Gwen]
+//        Average age: 25.166666666666668
     }
 }

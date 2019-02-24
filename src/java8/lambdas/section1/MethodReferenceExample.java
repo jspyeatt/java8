@@ -24,11 +24,17 @@ public class MethodReferenceExample {
         List<String> names = MethodReferenceExample.getStudentsName(stuList, Student::getName);
         System.out.println("Student names");
         names.forEach(n->System.out.println("Student name " + n));
+//        Student names
+//        Student name John
+//        Student name Betsey
+//        Student name Sam
+//        Student name Gwen
     }
 
     private static List<String> getStudentsName(List<Student> stuList, Function<Student, String> f) {
         List<String> results = new ArrayList<>();
         stuList.forEach(s->results.add(f.apply(s)));
+
         return results;
     }
     private static void referenceConstructor() {
@@ -37,6 +43,15 @@ public class MethodReferenceExample {
         numbers.forEach((i)->System.out.println("Before sqrt " + i));
         List<Double> squareRoots = MethodReferenceExample.findSquareRoots(numbers, Integer::new);
         squareRoots.forEach((d)->System.out.println("After sqrt " + d));
+
+//        Before sqrt 4
+//        Before sqrt 9
+//        Before sqrt 36
+//        Before sqrt 100
+//        After sqrt 2.0
+//        After sqrt 3.0
+//        After sqrt 6.0
+//        After sqrt 10.0
     }
     private static List<Double> findSquareRoots(List<Integer> numbers, Function<Integer, Integer> f) {
         List<Double> results = new ArrayList<>();
@@ -49,6 +64,9 @@ public class MethodReferenceExample {
         // lambda reference to static method.
         Runnable command = MethodReferenceExample::myStaticRun;
         executorService.execute(command);
+
+//        ----------------
+//        myStaticRun() is running
     }
     private static void myStaticRun() {
         System.out.println("----------------");

@@ -11,6 +11,11 @@ public class ExceptionExample {
     public static void main(String[] args) {
         List<Integer> integers = Arrays.asList(3,9,7,0,10);
         integers.forEach(consumerWrapper(i->System.out.println(50/i), Exception.class));
+//        16
+//        5
+//        7
+//        Exception has thrown i=0 / by zero
+//        5
     }
 
     private static <T, E extends Exception> Consumer<T> consumerWrapper(Consumer <T> consumer, Class<E> clazz) {

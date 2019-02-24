@@ -21,6 +21,14 @@ public class DoWorkExample {
         Stream<Student> parallelStream = stuList.parallelStream();
         System.out.println("=========");
         parallelStream.forEach(s->doProcess(s));
+
+//        =========
+//        Student{name='Clifford', age=2}
+//        Student{name='Gwen', age=19}
+//        Student{name='Sam', age=21}
+//        Student{name='John', age=55}
+//        Student{name='Thorin', age=1}
+//        Student{name='Betsey', age=53}
     }
     private static void doProcess(Student s) {
         System.out.println(s);
@@ -30,6 +38,14 @@ public class DoWorkExample {
         Stream<String> strStream = Arrays.stream(strArray);
         System.out.println("=========");
         strStream.forEach(System.out::println);
+
+//        =========
+//        aa
+//        bb
+//        cc
+//        dd
+//        ee
+//        ff
     }
 
 }

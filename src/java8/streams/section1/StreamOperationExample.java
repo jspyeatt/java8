@@ -23,6 +23,9 @@ public class StreamOperationExample {
         Stream<String> hasS = list.stream().filter(element->element.toLowerCase().contains("s"));
 
         hasS.forEach(System.out::println);
+//        filterExample()
+//        Betsey
+//        Sam
     }
 
     private static void anyMatchExample() {
@@ -31,6 +34,9 @@ public class StreamOperationExample {
         boolean containsZ = list.stream().anyMatch(element->element.contains("Z"));
         System.out.println("Do any elements contain an e? " + containsE);
         System.out.println("Do any elements contain an Z? " + containsZ);
+//        anyMatchExample()
+//        Do any elements contain an e? true
+//        Do any elements contain an Z? false
     }
 
     private static void distinctExample() {
@@ -40,5 +46,12 @@ public class StreamOperationExample {
         distinct.forEach(System.out::println);
 
         System.out.println("num distinct " + list.stream().distinct().count());
+
+//        distinctExample()
+//        John
+//        Betsey
+//        Sam
+//        Gwen
+//        num distinct 4
     }
 }

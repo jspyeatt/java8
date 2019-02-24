@@ -13,6 +13,8 @@ public class OptionalExample {
 
         Integer val = sum(a,b);
         System.out.println("val=" + val);
+
+        // val = 5
     }
     private static Integer sum(Optional<Integer> x, Optional<Integer>y) {
         return x.orElse(new Integer(0)) + y.orElse(new Integer(0));

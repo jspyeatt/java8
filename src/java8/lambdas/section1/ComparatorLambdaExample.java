@@ -15,6 +15,23 @@ public class ComparatorLambdaExample {
     public static void main(String[] args) {
 
         sortWithComparator();
+
+//        ========= sortWithComparator()
+//        ------ before sort ---------
+//        Student{name='John', age=55}
+//        Student{name='Betsey', age=53}
+//        Student{name='Sam', age=20}
+//        Student{name='Gwen', age=18}
+//        ------ after lambda sort ---------
+//        Student{name='Betsey', age=53}
+//        Student{name='Gwen', age=18}
+//        Student{name='John', age=55}
+//        Student{name='Sam', age=20}
+//        ---- after sorting with Comparator.comparing() static method
+//        Student{name='Betsey', age=53}
+//        Student{name='Gwen', age=18}
+//        Student{name='John', age=55}
+//        Student{name='Sam', age=20}
     }
 
     private static void sortWithComparator() {

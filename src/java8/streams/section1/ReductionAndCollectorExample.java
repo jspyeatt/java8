@@ -21,6 +21,8 @@ public class ReductionAndCollectorExample {
 
         Integer sum = integers.stream().reduce(0, (x,y)->x+y);
         System.out.println("sum=" + sum);
+
+        // 21
     }
 
     private static void collectionExample() {
@@ -33,6 +35,8 @@ public class ReductionAndCollectorExample {
         // 1+2+3
         OptionalInt reduced = IntStream.range(1,4).reduce((a, b)->a+b);
         System.out.println("intStreamExample = " + reduced.getAsInt());
+//        intStreamExample = 6
+//        intValue= 16
 
         // 10+1+2+3
         int intValue = IntStream.range(1,4).reduce(10, (a,b)->a+b);
@@ -41,7 +45,10 @@ public class ReductionAndCollectorExample {
         Integer r = Arrays.asList(1,2,3).parallelStream().reduce(10,(a,b)->a+b, (a,b)->{
             System.out.println("Combiner " + a);
             return a+b;});
+//        Combiner 12
+//        Combiner 11
         // 11+12+13
         System.out.println("3 arg with combiner " + r);
+//        3 arg with combiner 36
     }
 }

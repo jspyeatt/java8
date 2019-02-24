@@ -22,6 +22,12 @@ public class ForEachExample {
         Map<Integer, Student> studMap = Student.getStandardStudentMap();
 
         studMap.forEach((k,v)->System.out.println("k=" + k + " v=" + v));
+
+//        --- loopExampleForMaps() ---
+//        k=101 v=Student{name='Betsey', age=13}
+//        k=10 v=Student{name='John', age=15}
+//        k=203 v=Student{name='Thorin', age=1}
+//        k=204 v=Student{name='Clifford', age=2}
     }
     private static void loopExampleForLists() {
         System.out.println("--- loopExampleForLists() ---");
@@ -42,6 +48,20 @@ public class ForEachExample {
 
         // meta reference
         stuList.forEach(System.out::println);
+
+//        --- loopExampleForLists() ---
+//        Rick
+//        ======
+//        Randy
+//        ======
+//        Ron
+//        ======
+//        StudentConsumer accept() Student{name='Sam', age=20}
+//        StudentConsumer accept() Student{name='Gwen', age=18}
+//        lambda:Student{name='Sam', age=20}
+//        lambda:Student{name='Gwen', age=18}
+//        Student{name='Sam', age=20}
+//        Student{name='Gwen', age=18}
     }
 }
 class StudentConsumer implements Consumer<Student> {

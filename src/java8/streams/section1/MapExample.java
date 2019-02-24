@@ -24,11 +24,24 @@ public class MapExample {
 
         Stream<Student> allStudentNames = allCourses.stream().flatMap(course->course.getStudents().stream());
         allStudentNames.forEach(System.out::println);
+//        flatMapExample()
+//        Student{name='John', age=55}
+//        Student{name='Betsey', age=53}
+//        Student{name='Clifford', age=2}
+//        Student{name='Betsey', age=53}
     }
     private static void mapExample() {
         System.out.println("mapExample()");
         List<Student> studList = Student.getStandardStudentList();
         Stream<String> names = studList.stream().map(s->s.getName());
         names.forEach(System.out::println);
+
+//        mapExample()
+//        John
+//        Betsey
+//        Thorin
+//        Clifford
+//        Sam
+//        Gwen
     }
 }
